@@ -1,0 +1,234 @@
+---
+title: "Hip & Lower Leg Meta-analyses"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, error = FALSE)
+
+black <- "#000000"
+orange <- "#E69F00"
+lightblue <- "#56B4E9"
+green <- "#009E73"
+yellow <- "#F0E442"
+blue <- "#0072B2"
+red <- "#D55E00"
+pink <- "#CC79A7"
+
+library(tidyverse)
+library(metafor)
+library(broom)
+library(meta)
+# Do Hip/Calf
+
+hip_casecontrol_es <- read_csv("data/processed/Hip Case-control.csv")
+hip_within_es <- read_csv("data/processed/Hip Within.csv")
+
+# function for creating a tidy output for meta, like broom::tidy, as not available for class: meta objects.
+tidymeta <- function(x){
+  tibble(
+    "estimate" = x$TE.random,
+    "std.error" = x$seTE.random,
+    "ci.lb" = x$lower.random,
+    "ci.ub" = x$upper.random,
+    "statistic" = x$statistic.random,
+    "p.value" = x$pval.random,
+    "pred" = x$seTE.predict,
+    "pi.lb" = x$lower.predict,
+    "pi.ub" = x$upper.predict,
+    "i.squared" = x$I2,
+    "h" = x$H,
+    "tau.squared" = x$tau2,
+    "tau.squared.se" = x$se.tau2,
+    "cochran.qe" = x$Q,
+    "p.value.cochran.qe" = x$pval.Q,
+    "df.residual" = x$df.Q,
+    "nobs" = x$k)
+}
+
+# Case-Control meta-analysis
+hip_casecontrol_meta <- hip_casecontrol_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
+  mutate(aclr_n = as.character(acl_n),
+         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # character for foresst plot purposes
+  group_by(analysis_group) %>% # group by each publication and subgroups of interest in this review, for later 'pre-meta-analyses'
+  nest(data = -c(analysis_group)) %>%# nest data, remove data that is consistent across subgroups
+  ungroup() %>%
+  mutate(rma = map_if(data, 
+                      .$analysis_group %in% c("hip abd", "hip ext", "hip er"), 
+                      ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, subgroup = timepoint_cat, sm = "ROM"),
+                      .else = ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, sm = "ROM")),
+         output = map(rma, ~tidymeta(.x)),
+         acl_totaln = map(data, ~sum(.$acl_n)),
+         con_totaln = map(data, ~sum(.$con_n))) %>%
+  unnest(cols = output)
+
+hip_within_meta <- hip_within_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
+  mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
+         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # 
+  group_by(analysis_group) %>% # group by each publication and subgroups of interest in this review, for later 'pre-meta-analyses'
+  nest(data = -c(analysis_group)) %>%# nest data, remove data that is consistent across subgroups
+  ungroup() %>%
+  mutate(rma = map_if(data, 
+                      .$analysis_group %in% c("hip abd", "hip ext"), 
+                      ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, subgroup = timepoint_cat, sm = "ROM"),
+                      .else = ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, sm = "ROM")),
+         output = map(rma, ~tidymeta(.x)),
+         acl_totaln = map(data, ~sum(.$acl_n))) %>%
+  unnest(cols = output) 
+
+# Helper function for plotting different forest-plots
+forestmeta_function <- function(casecontrol = TRUE, var, xlim = NULL, colgap.studlab = "-5mm", ...){
+  dataset <- if(casecontrol == TRUE) hip_casecontrol_meta else hip_within_meta # choose which dataset
+  
+  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  
+  data <- dataset %>% # pluck data from original dataframe
+    filter(analysis_group == var) %>%
+    select(rma) %>%
+    pluck(1) %>%
+    pluck(1)
+  
+  xlim <- if(is.null(xlim) & casecontrol == TRUE) c(0.5, 2.0) else if(is.null(xlim) & casecontrol == FALSE) c(0.8, 1.25) else xlim
+  xlab <- log(xlim)
+  
+  # Plot
+  forest.meta(data,
+              sortvar = timepoint_mean,
+              common = FALSE,
+              prediction = TRUE,
+              xlab = label,
+              xlab.pos = xlab,
+              xlim = xlim,
+              smlab = "",
+              leftcols = c("study", "aclr_n", "timepoint_mean", "position"),
+              leftlabs = c("Study", "n\nACLR", "Mths post\nACLR", "Position"),
+              rightcols = c("effect.ci"),
+              rightlabs = c("RoM [95% CI]"),
+              just.addcols = "left",
+              addrows.below.overall = 1,
+              digits.addcols = 1,
+              print.pval.Q = FALSE,
+              fontfamily = "Karla",
+              ff.predict = 1,
+              ref = 1,
+              col.diamond = "black",
+              print.subgroup.labels = TRUE, 
+              subgroup.name = "Timepoint",
+              test.subgroup = FALSE, 
+              subgroup.hetstat = FALSE, 
+              col.random = "grey",
+              colgap.studlab = colgap.studlab,
+              ...) 
+  
+}
+
+
+```
+
+# 1. Hip Abduction
+
+```{r hip abd, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip abd")
+
+forestmeta_function(casecontrol = FALSE, var = "hip abd")
+
+```
+
+
+# 2. Hip Adduction
+
+```{r hip add, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip add")
+
+forestmeta_function(casecontrol = FALSE, var = "hip add")
+```
+
+# 3. Hip Extension 
+
+```{r hip ext, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip ext")
+
+forestmeta_function(casecontrol = FALSE, var = "hip ext")
+```
+
+# 4. Hip External Rotation 
+
+```{r hip er, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip er")
+
+forestmeta_function(casecontrol = FALSE, var = "hip er")
+
+```
+
+# 5. Hip Internal Rotation 
+
+```{r hip ir, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip ir")
+
+forestmeta_function(casecontrol = FALSE, var = "hip ir")
+
+```
+
+# 6. Hip Flexion
+
+```{r hip flex, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "hip flex", text.addline1 = "", colgap.studlab = "10mm")
+
+forestmeta_function(casecontrol = FALSE, var = "hip flex")
+
+```
+
+# 6. Plantarflexion
+
+```{r calf, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "calf")
+
+forestmeta_function(casecontrol = FALSE, var = "calf")
+
+```
+
+# 7. Dorsiflexion
+
+```{r dflex, fig.show='hold', out.width="50%", fig.width = 9}
+
+forestmeta_function(var = "dflex", text.addline1 = "", colgap.studlab = "10mm")
+
+forestmeta_function(casecontrol = FALSE, var = "dflex")
+
+```
+
+# 8 Funnel plot
+
+Eggers test
+
+``` {r funnel}
+par(family = "Karla")
+hip_within_meta %>%
+  filter(analysis_group == "hip abd") %>%
+  select(rma) %>%
+  pluck(1) %>%
+  pluck(1) %>%
+  metafor::funnel(.,
+              studlab = TRUE)
+dev.off()
+
+hip_within_es %>%
+  filter(analysis_group == "hip abd") %>%
+  mutate(y = yi/sei, x = 1/sei) %>%
+  lm(y ~ x, data = .) %>%
+  summary()
+
+```
+

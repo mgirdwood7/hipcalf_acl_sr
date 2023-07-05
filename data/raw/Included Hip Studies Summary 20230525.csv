@@ -1,0 +1,57 @@
+study,study_id,design,primary_acl,primary_acl_ns,contra_sx,subsequent_acl,country,link_study,groups,group,name,graft,n,age_mean,age_sd,female,bmi_mean,bmi_sd,tegner,age_other,bmi_note
+Barnett 2020,#3474,Secondary analysis of RCT Cohort,1,NA,NA,NA,USA,NA,2,1,Male,Bridge Enhanced ACL Repair (BEAR),28,22,6,0,26.1,4.5,NA,NA,NA
+Barnett 2020,#3474,Secondary analysis of RCT Cohort,1,NA,NA,NA,USA,NA,2,2,Female,Bridge Enhanced ACL Repair (BEAR),37,17.4,3.1,37,23.6,2.8,NA,NA,NA
+Rhim 2020,#4431,Case Control - Healthy,1,NA,Excluded,NA,South Korea,NA,2,1,ACLR,HS,32,30,7,20,22,2,NA,NA,NA
+Rhim 2020,#4431,Case Control - Healthy,1,NA,Excluded,NA,South Korea,NA,2,2,Healthy Controls,NA,32,29,8,17,23,1,NA,NA,NA
+Harput 2018,#1006,Cross-sectional,1,NA,Not specified,Not stated,Turkey,NA,1,1,Group 1,HS,72,28,7.6,0,24.2,4.2,7.3,NA,NA
+Kline 2018,#6462,Case Control - Healthy,1,NA,Excluded,Excluded,USA,NA,2,1,ACLR,mixed,20,22.8,NA,11,NA,NA,NA,15-45 Range,NA
+Kline 2018,#6462,Case Control - Healthy,1,NA,Excluded,Excluded,USA,NA,2,2,Control,NA,45,25.8,NA,22,NA,NA,NA,15-45 Range,NA
+"Myklebust 2017	",#4994,Case Control - Healthy,1,NA,Not specified,Not stated,Norway,Krosshaug 2016,2,1,ACL group,not stated,80,23.25,4.13,80,23.42,0.53,NA,NA,NA
+"Myklebust 2017	",#4994,Case Control - Healthy,1,NA,Not specified,Not stated,Norway,Krosshaug 2016,2,2,Control,NA,778,20.68,3.84,778,23.03,0.32,NA,NA,NA
+Bell 2016,#3050,Case Control - Healthy,1,NA,Excluded,Excluded,USA,NA,3,1,Low quadriceps,mixed,18,18.7,1.6,17,NA,NA,NA,NA,NA
+Bell 2016,#3050,Case Control - Healthy,1,NA,Excluded,Excluded,USA,NA,3,2,High quadriceps,mixed,37,19.1,1.7,31,NA,NA,NA,NA,NA
+Bell 2016,#3050,Case Control - Healthy,1,NA,Excluded,Excluded,USA,NA,3,3,Control,NA,73,19.8,1.5,60,NA,NA,NA,NA,NA
+Lima 2015,#5746,Case Control - Healthy,1,NA,Excluded,Not stated,Brazil,NA,2,1,ACL,not stated,27,25.6,5.8,0,25.6,4.4,NA,NA,NA
+Lima 2015,#5746,Case Control - Healthy,1,NA,Excluded,Not stated,Brazil,NA,2,2,Control,NA,27,23.7,4.3,0,25.6,3.4,NA,NA,NA
+Mouzopoulos 2015,#5104,Case Control - Healthy,1,NA,Excluded,Excluded,Greece,NA,3,1,PT,PT,32,NA,NA,0,NA,NA,NA,NA,NA
+Mouzopoulos 2015,#5104,Case Control - Healthy,1,NA,Excluded,Excluded,Greece,NA,3,2,HS,HS,36,NA,NA,0,NA,NA,NA,NA,NA
+Mouzopoulos 2015,#5104,Case Control - Healthy,1,NA,Excluded,Excluded,Greece,NA,3,3,Control,NA,68,25.7,3.4,0,NA,NA,NA,NA,NA
+Balki 2019,#3524,RCT,1,NA,Excluded,Not stated,Turkey,NA,2,1,KT,mixed,13,27.7,4.1,0,NA,NA,NA,NA,NA
+Balki 2019,#3524,RCT,1,NA,Excluded,Not stated,Turkey,NA,2,2,Sham KT,mixed,13,27.1,7.5,0,NA,NA,NA,NA,NA
+Hoch 2018,#256,Cross-sectional,1,1,Excluded,Not stated,USA,NA,1,1,Group 1,not stated,18,24.6,4.6,12,NA,NA,NA,NA,NA
+Bando 2017,#3511,Case Control - Healthy,1,1,Not specified,Not stated,Japan,NA,2,1,Healthy,NA,22,23,3.2,22,NA,NA,NA,NA,NA
+Bando 2017,#3511,Case Control - Healthy,1,1,Not specified,Not stated,Japan,NA,2,2,ACL,not stated,9,29.7,13.9,9,NA,NA,NA,NA,NA
+Tate 2017,#7811,Case Control - Healthy,1,1,Not specified,Not stated,USA,NA,2,1,ACL,mixed,12,20.8,2.1,7,NA,NA,NA,NA,NA
+Tate 2017,#7811,Case Control - Healthy,1,1,Not specified,Not stated,USA,NA,2,2,Healthy Control,NA,12,23.9,1.4,7,NA,NA,NA,NA,NA
+Hall 2015,#1097,Cross-sectional,1,NA,Not specified,Not stated,USA,NA,2,1,Poor SLST performance,mixed,15,33.6,NA,6,26.6,NA,NA,Range 15-42,range 21.4-40.7
+Hall 2015,#1097,Cross-sectional,1,NA,Not specified,Not stated,USA,NA,2,2,Good SLST performance,mixed,18,24.2,NA,8,24.2,NA,NA,Range 17-48,Range 19.5-34.4
+Noehren 2014,#4794,Case Control - Healthy,1,1,Not specified,Not stated,USA,NA,2,1,ACL group,mixed,20,21.1,5.9,20,NA,NA,6.5,NA,NA
+Noehren 2014,#4794,Case Control - Healthy,1,1,Not specified,Not stated,USA,NA,2,2,Healthy Control,NA,20,22.8,3.1,20,NA,NA,6.8,NA,NA
+Thomas 2013,#8157,Case Control - Healthy,1,NA,Excluded,Not stated,USA,NA,2,1,ACL,BPTB,15,20.27,5.38,7,NA,NA,NA,NA,NA
+Thomas 2013,#8157,Case Control - Healthy,1,NA,Excluded,Not stated,USA,NA,2,2,Control,NA,15,24.73,3.37,8,NA,NA,NA,NA,NA
+Dalton 2011,#2056,Case Control - Healthy,1,NA,Not specified,Not stated,USA,NA,2,1,ACLR,mixed,17,24.47,4.12,11,NA,NA,NA,NA,NA
+Dalton 2011,#2056,Case Control - Healthy,1,NA,Not specified,Not stated,USA,NA,2,2,Control,NA,17,23.17,2.68,11,NA,NA,NA,NA,NA
+Hadi 2019,#1119,Non-RCT,1,1,Not specified,Not stated,Iran,NA,4,1,Group A,HS - ST/G,20,26.7,NA,0,NA,NA,NA,Range 18-45,NA
+Hadi 2019,#1119,Non-RCT,1,1,Not specified,Not stated,Iran,NA,4,2,Group B,Tib Post Allograft,14,26.7,NA,5,NA,NA,NA,Range 18-45,NA
+Hadi 2019,#1119,Non-RCT,1,1,Not specified,Not stated,Iran,NA,4,3,Group C,BPTB,12,26.5,NA,0,NA,NA,NA,Range 18-34,NA
+Hadi 2019,#1119,Non-RCT,1,1,Not specified,Not stated,Iran,NA,4,4,Group D,HS - ST,12,26.9,NA,0,NA,NA,NA,Range 18-45,NA
+Hiemstra 2005,#294,Case Control - Healthy,1,1,Not specified,Not stated,Canada,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Geoghegan 2007,#1494,Case Control,1,NA,Not specified,Not stated,UK,NA,2,1,BPTB,BPTB,12,29.6,NA,0,NA,NA,NA,Range 21-39,NA
+Geoghegan 2007,#1494,Case Control,1,NA,Not specified,Not stated,UK,NA,2,2,HS,HS,10,37.5,NA,4,NA,NA,NA,Range 23-54,NA
+Urabe 2002,#7612,Case Series,1,1,Not specified,Not stated,Japan,NA,1,1,Group 1,HS - ST,44,32.7,NA,20,NA,NA,NA,Range 16-47,NA
+Nicholas 2001,#4839,RCT,1,NA,Excluded,Not stated,USA,NA,2,1,Tourniquet,PT,25,33,7,12,NA,NA,NA,NA,NA
+Nicholas 2001,#4839,RCT,1,NA,Excluded,Not stated,USA,NA,2,2,No tourniquet,PT,23,32,9,7,NA,NA,NA,NA,NA
+Tyler 2004,#8394,RCT,1,1,Not specified,Not stated,USA,NA,2,1,Creatine,BPTB,25,36,1.2,9,NA,NA,NA,NA,NA
+Tyler 2004,#8394,RCT,1,1,Not specified,Not stated,USA,NA,2,2,Placebo,BPTB,35,37,1.5,18,NA,NA,NA,NA,NA
+Karanikas 2004,#6743,Cross-sectional,1,1,Not specified,Not stated,Germany,NA,3,1,3-6 months post op,mixed,28,29,9,NA,NA,NA,5,NA,NA
+Karanikas 2004,#6743,Cross-sectional,1,1,Not specified,Not stated,Germany,NA,3,2,6-12 month post op,mixed,20,31,1,NA,NA,NA,5,NA,NA
+Karanikas 2004,#6743,Cross-sectional,1,1,Not specified,Not stated,Germany,NA,3,3,12-24 month,mixed,21,31,9,NA,NA,NA,7,NA,NA
+Karanikas 2005,#6744,Case Control,1,1,Not specified,Not stated,Germany,NA,2,1,Conservative,ACLD,12,33,12,NA,NA,NA,6,NA,NA
+Karanikas 2005,#6744,Case Control,1,1,Not specified,Not stated,Germany,NA,2,2,Surgical,mixed,21,31,9,NA,NA,NA,7,NA,NA
+Girdwood 2023,#99999,Prospective Cohort,1,NA,Excluded,Yes,Australia,Culvenor 2015,1,1,Group 1,HS,111,27,NA,43,25.6,NA,6,IQR 22-36,IQR 23.2 to 27.8
+Fukuyama 2022,#10753,Case Control - Healthy,1,1,Not specified,Not stated,Japan,NA,2,1,ACL,ACLD,20,24.7,6.9,12,23.3,4.1,NA,NA,NA
+Fukuyama 2022,#10753,Case Control - Healthy,1,1,Not specified,Not stated,Japan,NA,2,2,Healthy Control,NA,20,27.6,4,8,21.8,3.3,NA,NA,NA
+Rahova 2022,#11316,Case Control - Healthy,1,1,Not specified,Not stated,Turkey,NA,2,1,ACL group,not stated,20,25.4,5.32,0,23.47,1.2,NA,NA,NA
+Rahova 2022,#11316,Case Control - Healthy,1,1,Not specified,Not stated,Turkey,NA,3,2,Healthy Control,NA,20,26,4.21,0,23.54,1.48,NA,NA,NA
+Sullivan 2022,#11478,Case Control,1,NA,1,3,USA,NA,2,1,Male,not stated,10,21.6,7.1,0,NA,NA,NA,NA,NA
+Sullivan 2022,#11478,Case Control,1,NA,1,3,USA,NA,2,2,Female,not stated,8,20,5.6,8,NA,NA,NA,NA,NA

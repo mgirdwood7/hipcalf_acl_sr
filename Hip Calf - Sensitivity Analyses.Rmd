@@ -1,0 +1,207 @@
+---
+title: "Hip & Lower Leg - Sensitivity Analyses"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, error = FALSE)
+
+black <- "#000000"
+orange <- "#E69F00"
+lightblue <- "#56B4E9"
+green <- "#009E73"
+yellow <- "#F0E442"
+blue <- "#0072B2"
+red <- "#D55E00"
+pink <- "#CC79A7"
+
+library(tidyverse)
+library(metafor)
+library(broom)
+library(meta)
+# Do Hip/Calf
+
+hip_casecontrol_es <- read_csv("data/processed/Hip Case-control.csv")
+hip_within_es <- read_csv("data/processed/Hip Within.csv")
+
+# function for creating a tidy output for meta, like broom::tidy, as not available for class: meta objects.
+tidymeta <- function(x){
+  tibble(
+    "estimate" = x$TE.random,
+    "std.error" = x$seTE.random,
+    "ci.lb" = x$lower.random,
+    "ci.ub" = x$upper.random,
+    "statistic" = x$statistic.random,
+    "p.value" = x$pval.random,
+    "pred" = x$seTE.predict,
+    "pi.lb" = x$lower.predict,
+    "pi.ub" = x$upper.predict,
+    "i.squared" = x$I2,
+    "h" = x$H,
+    "tau.squared" = x$tau2,
+    "tau.squared.se" = x$se.tau2,
+    "cochran.qe" = x$Q,
+    "p.value.cochran.qe" = x$pval.Q,
+    "df.residual" = x$df.Q,
+    "nobs" = x$k)
+}
+
+# Leave one out analysis
+## First run the influence analysis with metafor package - gives all indepth statistics and measures
+## Join these to original data
+## Meta package provides nicer influence plot, but use the data from the metafor output in the plot.
+
+hip_within_loo <- hip_within_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
+  mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
+         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # 
+  group_by(analysis_group) %>%
+  mutate(k = length(study)) %>%
+  nest(data = -c(analysis_group, k)) %>%# nest data, remove data that is consistent across subgroups
+  ungroup() %>%
+  mutate(rma = map(data, ~rma(yi, vi, data = .x)), # runs metafor meta-analysis
+         metaforinf = map_if(rma,  # ruin a influence analysis from metafor package if k>1
+                             k > 2, 
+                             ~influence(.x) %>% pluck(1) %>% data.frame, # take the output
+                             .else = ~data.frame(inf = NA))) %>% # for k <=1 return df with NAs
+  mutate(new = map2(data, metaforinf, ~bind_cols(.x, .y))) %>% # combine influence data with original data
+  select(-c(data, rma, metaforinf)) %>% # remove all nested columns now not needed
+  # now run meta with metagen (inorder to get nice influence plots)
+  mutate(rma = map(new, ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, sm = "ROM")),
+         influence = map_if(rma, k > 2, ~metainf(.x, pooled = "random"))) # run influence analysis with meta package
+
+hip_casecontrol_loo <- hip_casecontrol_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
+  mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
+         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # 
+  group_by(analysis_group) %>%
+  mutate(k = length(study)) %>%
+  nest(data = -c(analysis_group, k)) %>%# nest data, remove data that is consistent across subgroups
+  ungroup() %>%
+  mutate(rma = map(data, ~rma(yi, vi, data = .x)), # runs metafor meta-analysis
+         metaforinf = map_if(rma,  # ruin a influence analysis from metafor package if k>1
+                             k > 2, 
+                             ~influence(.x) %>% pluck(1) %>% data.frame, # take the output
+                             .else = ~data.frame(inf = NA))) %>% # for k <=1 return df with NAs
+  mutate(new = map2(data, metaforinf, ~bind_cols(.x, .y))) %>% # combine influence data with original data
+  select(-c(data, rma, metaforinf)) %>% # remove all nested columns now not needed
+  # now run meta with metagen (inorder to get nice influence plots)
+  mutate(rma = map(new, ~metagen(TE = yi, seTE = sei, studlab = study, data = .x, sm = "ROM")),
+         influence = map_if(rma, k > 2, ~metainf(.x, pooled = "random"))) # run influence analysis with meta package
+
+
+# Helper function for plotting different forest-plots
+forest_loo <- function(casecontrol = TRUE, var, xlim = NULL, ...){
+  dataset <- if(casecontrol == TRUE) hip_casecontrol_loo else hip_within_loo # choose which dataset
+  
+  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  
+  data <- dataset %>% # pluck data from original dataframe
+    filter(analysis_group == var) %>%
+    select(influence) %>%
+    pluck(1) %>% 
+    pluck(1)
+  
+  xlim <- if(is.null(xlim) & casecontrol == TRUE) c(0.5, 2.0) else if(is.null(xlim) & casecontrol == FALSE) c(0.8, 1.25) else xlim
+  xlab <- log(xlim)
+  
+  # Plot
+  forest.meta(data,
+              lower.equi = exp(last(data$lower)), 
+              upper.equi = exp(last(data$upper)), 
+              col.equi = "green", 
+              fill.equi = "green",
+              leftcols = c("study", "inf"),
+              leftlabs = c("Omitted Study", "Sig Influence"),
+              text.random = "Original random effects model\n(All studies included)",
+              rightcols = c("effect.ci", "I2"),
+              backtransf = TRUE,
+              fontfamily = "Karla",
+              xlab = label,
+              xlab.pos = xlab,
+              xlim = xlim,
+              ...) 
+  
+}
+
+
+```
+
+# 1. Hip Abduction
+
+```{r hip abd, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(var = "hip abd")
+
+forest_loo(casecontrol = FALSE, var = "hip abd")
+
+```
+
+
+# 2. Hip Adduction
+
+```{r hip add, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(var = "hip add")
+
+forest_loo(casecontrol = FALSE, var = "hip add")
+```
+
+# 3. Hip Extension 
+
+```{r hip ext, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(var = "hip ext")
+
+forest_loo(casecontrol = FALSE, var = "hip ext")
+```
+
+# 4. Hip External Rotation 
+
+```{r hip er, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(var = "hip er")
+
+forest_loo(casecontrol = FALSE, var = "hip er")
+
+```
+
+# 5. Hip Internal Rotation 
+
+No leave-one-out completed as k = 2 for both comparisons
+
+# 6. Hip Flexion
+
+No leave-one-out for case control as k = 2
+
+```{r hip flex, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(casecontrol = FALSE, var = "hip flex")
+
+```
+
+# 6. Plantarflexion
+
+
+```{r calf, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(var = "calf")
+
+forest_loo(casecontrol = FALSE, var = "calf")
+
+```
+
+
+# 7. Dorsiflexion
+
+No leave-one-out for case control as k = 2
+
+```{r dflex, fig.show='hold', out.width="50%", fig.width = 9}
+
+forest_loo(casecontrol = FALSE, var = "dflex")
+
+```
+
