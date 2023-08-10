@@ -1,31 +1,33 @@
 ﻿study,randomsequence_1,randomsequence_2,randomsequence_c,allocation_1,allocation_2,allocation_c,blinding_patient_1,blinding_patient_2,blinding_patient_c,blinding_therapist_1,blinding_therapist_2,blinding_therapist_c,blinding_assessor_1,blinding_assessor_2,blinding_assessor_c,outcome_measurement_1,outcome_measurement_2,outcome_measurement_c,selection_1,selection_2,selectIion_c,attrition_1,attrition_2,attrition_c,analysis_1,analysis_2,analysis_c,notes_1,notes_2
-Urabe 2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,High,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,NA,Low,High,High,High,NA,Q12. looks like results were reported as %?
-Tyler 2004,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Low,Low,Low,Unclear,Low,Unclear,High,Unclear,High,Low,Low,Low,NA,NA,NA,High,High,High,High,High,High,NA,"Q11. started with 60, and ended up with 38 participants.     Q12. Only used % difference for strength testing."
-Thomas 2013,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Low,Unclear,NA,NA,NA,Low,High,Low,NA,Q12. Only used % difference therefore high ROB? 
-Tate 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
-Rhim 2020,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,High,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,"Q10. I put unclear as they talk about getting controls from ""the database"". Is that a surgical database? Were athletes excluded?   although they are matched for characteristics and sport level is this enough? Happy to change to low if you are happy MG."
-Noehren 2014,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,High,Unclear,High,NA,NA,NA,Low,Low,Low,NA,NA
-Nicholas 2001,Unclear,Low,Unclear,Unclear,Low,Low,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Low,Unclear,Low,High,Low,Low,NA,NA,NA,Low,Low,Low,High,High,High,NA,Q12 - only use %
-Myklebust 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,NA,NA,NA,Low,Low,Low,NA,"Q9. They have limited methodology around using the ""new isokinetic machine"" under quads / ham strength. Not sure if this changes things."
-Lima 2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
-Kline 2018,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,High,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
 Balki 2019,Low,Low,Low,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,High,High,High,Unclear,Low,Low,Low,Low,Low,NA,NA,NA,Low,Low,Low,Low,Low,Low,NA,"Q7 - I took it as the physio applying the K tape id the ""'treating physio"". No blinding was mentioned.     Q12 - assuming median and IQR is ok?"
 Bando 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
-Bell 2016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Low,Low,Low,NA,NA,Low,Low,Low,NA,NA
-Dalton 2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Low,Unclear,NA,NA,NA,Low,Low,Low,Put unclear for selection - as even though matched population source or recruitment type not reported.,NA
-Geoghegan 2007,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,High,Unclear,High,Low,Low,Low,Low,NA,Loiw,Low,High,High,"Outcome measurement - no mention of no. of trials, exact position, cueing etc.",NA
-Hadi 2019,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,High,High,High,Low,Low,Low,Low,Low,Low,Low,Low,Low,NA,NA
-Hall 2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,NA,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
-Harput 2018,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
-Hoch 2019,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
-Karanikas 2005,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,Low,Low,Low,Unclear,Unclear,Unclear,Low,NA,Low,Low,Low,Low,NA,NA
-Karanikas 2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,This is a slightly strange one - I am thinking this is a 'cross sectional' single time-point study even though the different groups have different timepoints as there is no overlap between,NA
 Barnett 2020,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Low,High,Low,Low,Unclear,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,NA,"4. although they talk about randomisation - this paper is observational of the BEAR group only (n=65)
 
 9. first line in functional outcomes paragrapgh references previously published technique. Then only brief details of method used. 
 
 12 - with PROMs - some participants not included in analysis. (table 2). Also no CI. only mean difference and p value"
-Girdwood 2023,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,NA,NA
+Bell 2016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Low,Low,Low,NA,NA,Low,Low,Low,NA,NA
+Dalton 2011,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Low,Unclear,NA,NA,NA,Low,Low,Low,Put unclear for selection - as even though matched population source or recruitment type not reported.,NA
 Fukuyama 2022,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Unclear,Low,High,High,High,NA,NA,NA,Low,Low,Low,NA,9 - no references and not the best detail  10. not enough info - happy to change this to unclear if more appropriate
+Geoghegan 2007,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,High,Unclear,High,Low,Low,Low,Low,NA,Loiw,Low,High,High,"Outcome measurement - no mention of no. of trials, exact position, cueing etc.",NA
+Girdwood 2023,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,Low,NA,NA
+Hadi 2019,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,High,High,High,Low,Low,Low,Low,Low,Low,Low,Low,Low,NA,NA
+Hall 2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,NA,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
+Harput 2018,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
+Hoch 2019,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
+Karanikas 2004,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,This is a slightly strange one - I am thinking this is a 'cross sectional' single time-point study even though the different groups have different timepoints as there is no overlap between,NA
+Karanikas 2005,High,NA,High,High,NA,High,High,NA,High,High,NA,High,High,Unclear,High,Low,Low,Low,Unclear,Unclear,Unclear,Low,NA,Low,Low,Low,Low,NA,NA
+Kline 2018,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,High,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
+Lima 2015,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Unclear,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,NA
+Mouzopoulos 2015,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,High,High,High,Unclear,Unclear,Unclear,High,High,High,Low,Low,Low,High,High,High,NA,NA
+Myklebust 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,NA,NA,NA,Low,Low,Low,NA,"Q9. They have limited methodology around using the ""new isokinetic machine"" under quads / ham strength. Not sure if this changes things."
+Nicholas 2001,Unclear,Low,Unclear,Unclear,Low,Low,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Low,Unclear,Low,High,Low,Low,NA,NA,NA,Low,Low,Low,High,High,High,NA,Q12 - only use %
+Noehren 2014,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,High,Unclear,High,NA,NA,NA,Low,Low,Low,NA,NA
 Rahova 2022,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,High,High,High,High,High,High,NA,NA,NA,Low,High,Low,NA,NA
+Rhatomy 2019,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,High,High,High,Low,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
+Rhim 2020,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,High,Unclear,Unclear,NA,NA,NA,Low,Low,Low,NA,"Q10. I put unclear as they talk about getting controls from ""the database"". Is that a surgical database? Were athletes excluded?   although they are matched for characteristics and sport level is this enough? Happy to change to low if you are happy MG."
 Sullivan 2022,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,NA,Low,NA,Low,Low,Low,NA,NA
+Tate 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,Low,Low,Low,Low,Low,Low,NA,NA,NA,Low,Low,Low,NA,NA
+Thomas 2013,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,Unclear,High,Low,Low,Low,Unclear,Low,Unclear,NA,NA,NA,Low,High,Low,NA,Q12. Only used % difference therefore high ROB? 
+Tyler 2004,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,Low,Low,Low,Unclear,Low,Unclear,High,Unclear,High,Low,Low,Low,NA,NA,NA,High,High,High,High,High,High,NA,"Q11. started with 60, and ended up with 38 participants.     Q12. Only used % difference for strength testing."
+Urabe 2002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,High,High,High,High,Unclear,Unclear,Unclear,Unclear,Unclear,Unclear,NA,Low,High,High,High,NA,Q12. looks like results were reported as %?

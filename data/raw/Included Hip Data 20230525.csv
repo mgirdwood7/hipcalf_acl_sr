@@ -11,6 +11,12 @@ Bando 2017,hip er hhd 0 supine,HHD Supine,hip er,,kgf/kg,Healthy,NA,22,8,NA,NA,N
 Bando 2017,hip er hhd 0 supine,HHD Supine,hip er,,kgf/kg,ACL,NA,9,8,NA,NA,NA,NA,0.13,0.05,NA,NA,NA,NA,NA
 Bando 2017,hip ir hhd 0 supine,HHD Supine,hip ir,,kgf/kg,Healthy,NA,22,8,NA,NA,NA,NA,0.1,0.03,NA,NA,NA,NA,NA
 Bando 2017,hip ir hhd 0 supine,HHD Supine,hip ir,,kgf/kg,ACL,NA,9,8,NA,NA,NA,NA,0.14,0.04,NA,NA,NA,NA,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,27,6,NA,NA,NA,NA,NA,NA,NA,NA,97.1,14.6,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,27,12,NA,NA,NA,NA,NA,NA,NA,NA,104.8,18,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,25,24,NA,NA,NA,NA,NA,NA,NA,NA,106.3,17.8,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,36,6,NA,NA,NA,NA,NA,NA,NA,NA,106.5,15.7,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,34,12,NA,NA,NA,NA,NA,NA,NA,NA,102.9,15.1,NA
+Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,31,24,NA,NA,NA,NA,NA,NA,NA,NA,104.5,13.2,NA
 Bell 2016,hip abd hhd sidely,HHD Sidely,hip abd,,kg/kg,Low quadriceps,1,18,22.6,NA,NA,NA,NA,49.44,11.1,49.95,9.84,NA,NA,NA
 Bell 2016,hip abd hhd sidely,HHD Sidely,hip abd,,kg/kg,High quadriceps,1,37,34.9,NA,NA,NA,NA,42.78,9.67,44.73,10.01,NA,NA,NA
 Bell 2016,hip abd hhd sidely,HHD Sidely,hip abd,,kg/kg,Control,NA,73,30,NA,NA,NA,NA,44.95,9.58,46.07,9.84,NA,NA,NA
@@ -29,6 +35,18 @@ Dalton 2011,hip er hhd seated,HHD Seated,hip er,,NA,ACLR,NA,17,36.36,NA,NA,NA,19
 Dalton 2011,hip er hhd seated,HHD Seated,hip er,,NA,Control,NA,17,36.36,NA,NA,NA,19.92,0.37,0.18,NA,NA,NA,NA,NA
 Dalton 2011,hip ext hhd prone,HHD Prone,hip ext,,n/kg,ACLR,NA,17,36.36,NA,NA,NA,19.92,0.53,0.25,NA,NA,NA,NA,NA
 Dalton 2011,hip ext hhd prone,HHD Prone,hip ext,,n/kg,Control,NA,17,36.36,NA,NA,NA,19.92,0.43,0.14,NA,NA,NA,NA,NA
+Fukuyama 2022,hip ext hhd prone,HHD Prone,hip ext,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,13.5,5.2,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip ext hhd prone,HHD Prone,hip ext,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,12.2,5.7,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip flex hhd seated,HHD Seated,hip flex,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,14.2,5.2,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip flex hhd seated,HHD Seated,hip flex,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,9.8,2.7,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip abd hhd supine,HHD Supine,hip abd,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,8.3,4.8,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip abd hhd supine,HHD Supine,hip abd,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,5.4,2.4,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip add hhd supine,HHD Supine,hip add,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,6.3,2.9,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip add hhd supine,HHD Supine,hip add,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,6.3,2.7,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip er hhd seated,HHD Seated,hip er,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,7,3.6,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip er hhd seated,HHD Seated,hip er,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,5.7,1.9,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip ir hhd seated,HHD Seated,hip ir,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,8.6,4.3,NA,NA,NA,NA,data from author
+Fukuyama 2022,hip ir hhd seated,HHD Seated,hip ir,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,6.8,2.2,NA,NA,NA,NA,data from author
 Geoghegan 2007,hip ext isk con 30,ISK Con 30 Standing,hip ext,,lsi,BPTB,1,12,3,NA,NA,NA,NA,NA,NA,NA,NA,113,NA,NA
 Geoghegan 2007,hip ext isk con 30,ISK Con 30 Standing,hip ext,,lsi,HS,1,10,3,NA,NA,NA,NA,NA,NA,NA,NA,89,NA,NA
 Girdwood 2023,hip er hhd 0 prone,HHD Prone,hip er,,nm/kg,Group 1,NA,111,12,NA,NA,NA,NA,0.75,0.16,0.8,0.18,NA,NA,NA
@@ -92,6 +110,26 @@ Lima 2015,hip add isk con 30,ISK Con 30,hip add,exclude - isk 30,nm/kg,ACL,NA,27
 Lima 2015,hip add isk con 30,ISK Con 30,hip add,exclude - isk 30,nm/kg,Control,NA,27,9.6,NA,NA,NA,3.8,138.1,60.6,148.8,63.6,NA,NA,NA
 Lima 2015,hip add isk con 60,ISK Con 60,hip add,,nm/kg,ACL,NA,27,9.6,NA,NA,NA,3.8,168.7,88,166.1,72.1,NA,NA,NA
 Lima 2015,hip add isk con 60,ISK Con 60,hip add,,nm/kg,Control,NA,27,9.6,NA,NA,NA,3.8,131.4,59.3,137.6,49.8,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 120,ISK Ecc 120 Standing,hip flex,exclude MA - ecc,nm/kg,PT,1,32,0.1,NA,NA,NA,NA,0.92,0.07,0.83,0.06,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 120,ISK Ecc 120 Standing,hip flex,exclude MA - ecc,nm/kg,PT,1,32,12,NA,NA,NA,NA,1.31,0.05,1.17,0.06,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 60,ISK Ecc 60 Standing,hip flex,exclude MA - ecc,nm/kg,PT,1,32,0.1,NA,NA,NA,NA,0.87,0.04,0.77,0.07,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 60,ISK Ecc 60 Standing,hip flex,exclude MA - ecc,nm/kg,PT,1,32,12,NA,NA,NA,NA,1.23,0.09,1.06,0.09,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 120,ISK Con 120 Standing,hip flex,exclude MA - use 60,nm/kg,PT,1,32,0.1,NA,NA,NA,NA,0.81,0.05,0.79,0.07,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 120,ISK Con 120 Standing,hip flex,,nm/kg,PT,1,32,12,NA,NA,NA,NA,1.2,0.05,0.98,0.11,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 60,ISK Con 60 Standing,hip flex,"exclude MA - conflicting data reported in paper, not using.",nm/kg,PT,1,32,0.1,NA,NA,NA,NA,0.77,0.07,0.69,0.06,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 60,ISK Con 60 Standing,hip flex,"exclude MA - conflicting data reported in paper, not using.",nm/kg,PT,1,32,12,NA,NA,NA,NA,1.1,0.09,0.74,0.1,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 120,ISK Ecc 120 Standing,hip flex,exclude MA - ecc,nm/kg,HS,1,36,0.1,NA,NA,NA,NA,0.94,0.05,0.82,0.06,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 120,ISK Ecc 120 Standing,hip flex,exclude MA - ecc,nm/kg,HS,1,36,12,NA,NA,NA,NA,1.13,0.16,1.18,0.07,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 60,ISK Ecc 60 Standing,hip flex,exclude MA - ecc,nm/kg,HS,1,36,0.1,NA,NA,NA,NA,0.75,0.1,0.8,0.06,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 60,ISK Ecc 60 Standing,hip flex,exclude MA - ecc,nm/kg,HS,1,36,12,NA,NA,NA,NA,1.16,0.1,1.07,0.12,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 120,ISK Con 120 Standing,hip flex,exclude MA - use 60,nm/kg,HS,1,36,0.1,NA,NA,NA,NA,0.78,0.09,0.77,0.09,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 120,ISK Con 120 Standing,hip flex,,nm/kg,HS,1,36,12,NA,NA,NA,NA,1.05,0.22,0.96,0.12,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 60,ISK Con 60 Standing,hip flex,"exclude MA - conflicting data reported in paper, not using.",nm/kg,HS,1,36,0.1,NA,NA,NA,NA,0.73,0.1,0.67,0.08,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 60,ISK Con 60 Standing,hip flex,"exclude MA - conflicting data reported in paper, not using.",nm/kg,HS,1,36,12,NA,NA,NA,NA,0.99,0.28,0.74,0.15,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 120,ISK Ecc 120 Standing,hip flex,exclude MA - use 60,nm/kg,Healthy Control,NA,68,0.1,NA,NA,NA,NA,1.41,NA,NA,NA,NA,NA,NA
+Mouzopoulos 2015,hip flex isk ecc 60,ISK Ecc 60 Standing,hip flex,exclude MA - use 60,nm/kg,Healthy Control,NA,68,0.1,NA,NA,NA,NA,1.33,NA,NA,NA,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 120,ISK Con 120 Standing,hip flex,,nm/kg,Healthy Control,NA,68,0.1,NA,NA,NA,NA,1.28,NA,NA,NA,NA,NA,NA
+Mouzopoulos 2015,hip flex isk con 60,ISK Con 60 Standing,hip flex,exclude MA - use 60,nm/kg,Healthy Control,NA,68,0.1,NA,NA,NA,NA,1.2,NA,NA,NA,NA,NA,NA
 Myklebust 2017,hip abd hhd supine,HHD Supine,hip abd,,kg/kg,ACL group,NA,80,42,NA,NA,NA,30,0.22,0.05,0.21,0.05,NA,NA,NA
 Myklebust 2017,hip abd hhd supine,HHD Supine,hip abd,,kg/kg,Control,NA,697,42,NA,NA,NA,30,0.209,0.0511,0.209,0.0505,NA,NA,data from author
 Nicholas 2001,calf mvic 0,ISK MVIC 0,calf,,lsi,Tourniquet,NA,25,0.1,NA,NA,NA,NA,NA,NA,NA,NA,91.31,2.85,data extracted graphically
@@ -106,12 +144,28 @@ Noehren 2014,hip abd hhd sidely,HHD Sidely,hip abd,,nm/kg,ACL group,NA,20,7.31,N
 Noehren 2014,hip abd hhd sidely,HHD Sidely,hip abd,,nm/kg,Healthy Control,NA,20,7.31,NA,NA,NA,1.45,14.5,3.5,NA,NA,NA,NA,NA
 Noehren 2014,hip er hhd seated,HHD Seated,hip er,,nm/kg,ACL group,NA,20,7.31,NA,NA,NA,1.45,6.9,4.4,NA,NA,NA,NA,NA
 Noehren 2014,hip er hhd seated,HHD Seated,hip er,,nm/kg,Healthy Control,NA,20,7.31,NA,NA,NA,1.45,6.4,1.5,NA,NA,NA,NA,NA
+Rahova 2022,hip flex hhd,HHD,hip flex,,NA,ACL group,NA,20,6,NA,NA,NA,NA,34.22,5.53,33.98,5.42,NA,NA,NA
+Rahova 2022,hip flex hhd,HHD,hip flex,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,29.88,8.06,30.77,6.84,NA,NA,NA
+Rahova 2022,hip ext hhd,HHD,hip ext,,NA,ACL group,NA,20,6,NA,NA,NA,NA,32.07,9.23,31.97,8.76,NA,NA,NA
+Rahova 2022,hip ext hhd,HHD,hip ext,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,31.64,10.8,30.95,10.26,NA,NA,NA
+Rahova 2022,hip abd hhd,HHD,hip abd,,NA,ACL group,NA,20,6,NA,NA,NA,NA,35.59,8.64,37.13,9.27,NA,NA,NA
+Rahova 2022,hip abd hhd,HHD,hip abd,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,35.4,12.39,35.49,12.81,NA,NA,NA
+Rahova 2022,hip add hhd,HHD,hip add,,NA,ACL group,NA,20,6,NA,NA,NA,NA,31.76,7.1,30.26,7.34,NA,NA,NA
+Rahova 2022,hip add hhd,HHD,hip add,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,28.54,11.13,28.61,11.03,NA,NA,NA
+Rahova 2022,dflex hhd,HHD,dflex,,NA,ACL group,NA,20,6,NA,NA,NA,NA,24.11,3.99,23.56,4.81,NA,NA,NA
+Rahova 2022,dflex hhd,HHD,dflex,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,23.55,5.35,23.82,6.33,NA,NA,NA
+Rahova 2022,pflex hhd,HHD,calf,,NA,ACL group,NA,20,6,NA,NA,NA,NA,26.33,7.24,25.94,6.43,NA,NA,NA
+Rahova 2022,pflex hhd,HHD,calf,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,28.15,3.93,27.36,4.12,NA,NA,NA
+Rhatomy 2019,ankle ev hhd,HHD Sidely,ankle ev,exclude MA,n,Group 1,NA,31,6,NA,NA,NA,NA,65.87,7.63,66.96,8.38,NA,NA,NA
+Rhatomy 2019,hallux pflex hhd,HHD prone,hallux,exclude MA,n,Group 1,NA,31,6,NA,NA,NA,NA,150.64,11.67,152.1,12.16,NA,NA,NA
 Rhim 2020,calf isk con 120,ISK Con 120,calf,,nm/kg,ACLR,NA,32,0.1,NA,NA,NA,NA,21,13.9,72,22.2,NA,NA,NA
 Rhim 2020,calf isk con 120,ISK Con 120,calf,,nm/kg,ACLR,NA,32,12,NA,NA,NA,NA,77,22.9,78,22.6,NA,NA,NA
 Rhim 2020,calf isk con 120,ISK Con 120,calf,,nm/kg,Healthy Controls,NA,32,12,NA,NA,NA,NA,81,22.5,81,23.1,NA,NA,NA
 Rhim 2020,soleus isk con 120,ISK Con 120,soleus,exclude - only soleus study,nm/kg,ACLR,NA,32,0.1,NA,NA,NA,NA,41,10.9,50,18.7,NA,NA,NA
 Rhim 2020,soleus isk con 120,ISK Con 120,soleus,exclude - only soleus study,nm/kg,ACLR,NA,32,12,NA,NA,NA,NA,54,15.9,49,15,NA,NA,NA
 Rhim 2020,soleus isk con 120,ISK Con 120,soleus,exclude - only soleus study,nm/kg,Healthy Controls,NA,32,12,NA,NA,NA,NA,47,16.1,49,15.9,NA,NA,NA
+Sullivan 2022,hip abd hhd sidely,HHD Sidely,hip abd,,%BM,Male,1,10,10.4,NA,NA,NA,NA,18.04,6.16,15.99,4.7,NA,NA,NA
+Sullivan 2022,hip abd hhd sidely,HHD Sidely,hip abd,,%BM,Female,1,8,10,NA,NA,NA,NA,14.4,4.56,14.89,3.79,NA,NA,NA
 Tate 2017,hip abd hhd sidely,HHD Sidely,hip abd,,N/height*BW,ACL,NA,12,32,NA,9 to 58,NA,NA,0.3,0.08,0.28,0.06,105,8,NA
 Tate 2017,hip abd hhd sidely,HHD Sidely,hip abd,,N/height*BW,Healthy Control,NA,12,32,NA,9 to 58,NA,NA,0.33,0.05,NA,NA,NA,NA,right limb
 Tate 2017,hip ext hhd prone,HHD Prone,hip ext,,N/height*BW,ACL,NA,12,32,NA,9 to 58,NA,NA,0.18,0.05,0.19,0.07,93,15,NA
@@ -150,35 +204,3 @@ Urabe 2002,hip add isk con 60,ISK Con 60,hip add,,nm/kg,Group 1,NA,44,3,NA,NA,NA
 Urabe 2002,hip add isk con 60,ISK Con 60,hip add,,nm/kg,Group 1,NA,44,6,NA,NA,NA,NA,1.76,0.37,1.985,0.428,NA,NA,data extracted graphically
 Urabe 2002,hip add isk con 60,ISK Con 60,hip add,,nm/kg,Group 1,NA,44,9,NA,NA,NA,NA,1.809,0.354,1.987,0.396,NA,NA,data extracted graphically
 Urabe 2002,hip add isk con 60,ISK Con 60,hip add,,nm/kg,Group 1,NA,44,12,NA,NA,NA,NA,1.816,0.359,1.951,0.327,93.4,NA,data extracted graphically
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,27,6,NA,NA,NA,NA,NA,NA,NA,NA,97.1,14.6,NA
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,27,12,NA,NA,NA,NA,NA,NA,NA,NA,104.8,18,NA
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Male,1,25,24,NA,NA,NA,NA,NA,NA,NA,NA,106.3,17.8,NA
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,36,6,NA,NA,NA,NA,NA,NA,NA,NA,106.5,15.7,NA
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,34,12,NA,NA,NA,NA,NA,NA,NA,NA,102.9,15.1,NA
-Barnett 2020,hip abd hhd sidely,HHD Sidely,hip abd,,lsi,Female,1,31,24,NA,NA,NA,NA,NA,NA,NA,NA,104.5,13.2,NA
-Fukuyama 2022,hip ext hhd prone,HHD Prone,hip ext,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,13.5,5.2,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip ext hhd prone,HHD Prone,hip ext,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,12.2,5.7,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip flex hhd seated,HHD Seated,hip flex,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,14.2,5.2,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip flex hhd seated,HHD Seated,hip flex,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,9.8,2.7,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip abd hhd supine,HHD Supine,hip abd,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,8.3,4.8,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip abd hhd supine,HHD Supine,hip abd,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,5.4,2.4,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip add hhd supine,HHD Supine,hip add,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,6.3,2.9,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip add hhd supine,HHD Supine,hip add,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,6.3,2.7,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip er hhd seated,HHD Seated,hip er,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,7,3.6,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip er hhd seated,HHD Seated,hip er,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,5.7,1.9,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip ir hhd seated,HHD Seated,hip ir,exclude MA - ACLD,kgf,ACL,NA,20,1.51,NA,NA,NA,0.65,8.6,4.3,NA,NA,NA,NA,data from author
-Fukuyama 2022,hip ir hhd seated,HHD Seated,hip ir,exclude MA - ACLD,kgf,Healthy Control,NA,20,1.51,NA,NA,NA,0.65,6.8,2.2,NA,NA,NA,NA,data from author
-Rahova 2022,hip flex hhd,HHD,hip flex,,NA,ACL group,NA,20,6,NA,NA,NA,NA,34.22,5.53,33.98,5.42,NA,NA,NA
-Rahova 2022,hip flex hhd,HHD,hip flex,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,29.88,8.06,30.77,6.84,NA,NA,NA
-Rahova 2022,hip ext hhd,HHD,hip ext,,NA,ACL group,NA,20,6,NA,NA,NA,NA,32.07,9.23,31.97,8.76,NA,NA,NA
-Rahova 2022,hip ext hhd,HHD,hip ext,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,31.64,10.8,30.95,10.26,NA,NA,NA
-Rahova 2022,hip abd hhd,HHD,hip abd,,NA,ACL group,NA,20,6,NA,NA,NA,NA,35.59,8.64,37.13,9.27,NA,NA,NA
-Rahova 2022,hip abd hhd,HHD,hip abd,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,35.4,12.39,35.49,12.81,NA,NA,NA
-Rahova 2022,hip add hhd,HHD,hip add,,NA,ACL group,NA,20,6,NA,NA,NA,NA,31.76,7.1,30.26,7.34,NA,NA,NA
-Rahova 2022,hip add hhd,HHD,hip add,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,28.54,11.13,28.61,11.03,NA,NA,NA
-Rahova 2022,dflex hhd,HHD,dflex,,NA,ACL group,NA,20,6,NA,NA,NA,NA,24.11,3.99,23.56,4.81,NA,NA,NA
-Rahova 2022,dflex hhd,HHD,dflex,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,23.55,5.35,23.82,6.33,NA,NA,NA
-Rahova 2022,pflex hhd,HHD,calf,,NA,ACL group,NA,20,6,NA,NA,NA,NA,26.33,7.24,25.94,6.43,NA,NA,NA
-Rahova 2022,pflex hhd,HHD,calf,,NA,Healthy Control,NA,20,6,NA,NA,NA,NA,28.15,3.93,27.36,4.12,NA,NA,NA
-Sullivan 2022,hip abd hhd sidely,HHD Sidely,hip abd,,%BM,Male,1,10,10.4,NA,NA,NA,NA,18.04,6.16,15.99,4.7,NA,NA,NA
-Sullivan 2022,hip abd hhd sidely,HHD Sidely,hip abd,,%BM,Female,1,8,10,NA,NA,NA,NA,14.4,4.56,14.89,3.79,NA,NA,NA

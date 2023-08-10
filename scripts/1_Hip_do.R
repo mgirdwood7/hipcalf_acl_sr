@@ -67,7 +67,7 @@ hip_tocombine <- hip_all %>%
   select(-c(tegner, age_other, bmi_note, timepoint_range, timepoint_iqr, timepoint_sd, notes)) %>% # remove variables not combined
   group_by(study, measure) %>%
   mutate(timepoint_mean_new = case_when( # combine timepoints
-    !study %in% c("Hadi 2019", "Barnett 2020") ~ combine_mean(n, timepoint_mean), # don't do this for Hadi where all participants are measured across 2 different timepoints
+    !study %in% c("Hadi 2019", "Barnett 2020", "Mouzopoulos 2015") ~ combine_mean(n, timepoint_mean), # don't do this for Hadi where all participants are measured across 2 different timepoints
     TRUE ~ timepoint_mean)) %>%
   ungroup() %>%
   group_by(study, measure, timepoint_mean_new) %>% # group by study and outcome measure
@@ -85,8 +85,8 @@ hip_tocombine <- hip_all %>%
          noninj_sd_new = combine_sd(n, noninj_mean, noninj_sd),  
          lsi_mean_new = combine_mean(n, lsi_mean),
          lsi_sd_new = combine_sd(n, lsi_mean, lsi_sd), 
-         bmi_new = combine_mean(n, bmi_mean), 
-         age_new = combine_mean(n, age_mean),
+         bmi_mean_new = combine_mean(n, bmi_mean), 
+         age_mean_new = combine_mean(n, age_mean),
          timepoint_mean_new = combine_mean(n, timepoint_mean), 
          ) %>%
   distinct(measure, study, .keep_all = TRUE) %>%
@@ -116,6 +116,16 @@ hip_all <- hip_all %>%
     TRUE ~ lsi_sd
   )) %>%
   mutate(across(c(lsi_mean, lsi_sd), ~.x/100))
+
+## No SD for control group from Mouzopoulos 2015
+# Using SD from same position and testing protocol in Thomas 2013 control group - 0.595.
+
+
+hip_all <- hip_all %>%
+  mutate(inj_sd = case_when(
+    study == "Mouzopoulos 2015" & group == "Healthy Control" ~ 0.595,
+    TRUE ~ inj_sd
+  ))
 
 
 # Need to calculate effect sizes for ACL vs Control
@@ -173,3 +183,4 @@ hip_within_es <- hip_within_es %>%
 
 write_csv(hip_casecontrol_es, "data/processed/Hip Case-control.csv")
 write_csv(hip_within_es, "data/processed/Hip Within.csv")
+

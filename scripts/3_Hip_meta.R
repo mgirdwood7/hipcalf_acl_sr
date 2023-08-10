@@ -40,7 +40,7 @@ hip_within_meta <- hip_within_es %>%
 forestmeta_function <- function(casecontrol = TRUE, var, xlim = NULL, colgap.studlab = "-5mm", ...){
   dataset <- if(casecontrol == TRUE) hip_casecontrol_meta else hip_within_meta # choose which dataset
   
-  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  label <- if(casecontrol == TRUE) c("ACLR limb weaker", "Control limb weaker") else  c("ACLR limb weaker", "Contralateral limb weaker")
   
   data <- dataset %>% # pluck data from original dataframe
     filter(analysis_group == var) %>%
@@ -61,7 +61,7 @@ forestmeta_function <- function(casecontrol = TRUE, var, xlim = NULL, colgap.stu
               xlim = xlim,
               smlab = "",
               leftcols = c("study", "aclr_n", "timepoint_mean", "position"),
-              leftlabs = c("Study", "n\nACLR", "Mths post\nACLR", "Position"),
+              leftlabs = c("Study", "n\nACLR", "Months\npost ACLR", "Method"),
               rightcols = c("effect.ci"),
               rightlabs = c("RoM [95% CI]"),
               just.addcols = "left",
@@ -262,6 +262,7 @@ forestmeta_functionsmd <- function(casecontrol = TRUE, var, ...){
 ## Meta package provides nicer influence plot, but use the data from the metafor output in the plot.
 
 hip_within_loo <- hip_within_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
   mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
          timepoint_cat = factor(if_else(timepoint_mean >= 12, "More than 12 mths", "Less than 12 mths"))) %>% # 
   group_by(analysis_group) %>%
@@ -280,6 +281,7 @@ hip_within_loo <- hip_within_es %>%
          influence = map_if(rma, k > 2, ~metainf(.x, pooled = "random"))) # run influence analysis with meta package
 
 hip_casecontrol_loo <- hip_casecontrol_es %>%
+  filter(is.na(exclude)) %>% # remove data to exclude from MA
   mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
          timepoint_cat = factor(if_else(timepoint_mean >= 12, "More than 12 mths", "Less than 12 mths"))) %>% # 
   group_by(analysis_group) %>%
@@ -302,7 +304,7 @@ hip_casecontrol_loo <- hip_casecontrol_es %>%
 forest_loo <- function(casecontrol = TRUE, var, xlim = NULL, ...){
   dataset <- if(casecontrol == TRUE) hip_casecontrol_loo else hip_within_loo # choose which dataset
   
-  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  label <- if(casecontrol == TRUE) c("ACLR limb weaker", "Control limb weaker") else  c("ACLR limb weaker", "Contralateral limb weaker")
   
   data <- dataset %>% # pluck data from original dataframe
     filter(analysis_group == var) %>%
@@ -414,7 +416,7 @@ text(x = c(-0.70, -0.5),
      y = 11.5,
      pos = 4,
      cex = 0.9,
-     labels = c("No. of\nStudies", "n\nACL"))
+     labels = c("No. of\nStudies", "n\nACLR"))
 segments(x0 = 0, y0 = -1, y1 = 10.5)
 addpoly(x = within_summary$estimate, 
         ci.lb = within_summary$ci.lb,
@@ -427,8 +429,8 @@ abline(h = 10.5, col = "white", lwd = 4)
 par(xpd = NA)
 text(x = c(log(0.8), log(1.25)),
      y = -3,
-     labels = c("ACL side weaker", "Contra side weaker"))
-text(x = c(log(0.8), log(1.25)), y = 7, # arrows for pi outside of limits
+     labels = c("\nACLR\nlimb weaker", "\nContralateral\nlimb weaker"))
+text(x = c(log(0.8), log(1.25)), y = c(7,7, 4, 4), # arrows for pi outside of limits
      label = c("<", ">"),
      cex = 1,
      col = "#F9C79F")
@@ -475,7 +477,7 @@ text(x = c(-1.55, -1.15),
      y = 11.5,
      pos = 4,
      cex = 0.9,
-     labels = c("No. of \nStudies", "n\nACL"))
+     labels = c("No. of \nStudies", "n\nACLR"))
 segments(x0 = 0, y0 = -1, y1 = 10.5)
 addpoly(x = casecontrol_summary$estimate, 
         ci.lb = casecontrol_summary$ci.lb,
@@ -488,7 +490,7 @@ abline(h = 10.5 , col = "white", lwd = 4)
 par(xpd = NA)
 text(x = c(log(0.5), log(2)),
      y = -3,
-     labels = c("ACL group weaker", "Uninjured control weaker"))
+     labels = c("ACLR limb weaker", "Control limb weaker"))
 text(x = c(log(0.5), log(2)), y = 8, # arrows for pi outside of limits
      label = c("<", ">"),
      cex = 1,

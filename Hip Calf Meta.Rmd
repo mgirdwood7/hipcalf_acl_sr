@@ -85,7 +85,7 @@ hip_within_meta <- hip_within_es %>%
 forestmeta_function <- function(casecontrol = TRUE, var, xlim = NULL, colgap.studlab = "-5mm", ...){
   dataset <- if(casecontrol == TRUE) hip_casecontrol_meta else hip_within_meta # choose which dataset
   
-  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  label <- if(casecontrol == TRUE) c("ACLR limb weaker", "Control limb weaker") else  c("ACLR limb weaker", "Contralateral limb weaker")
   
   data <- dataset %>% # pluck data from original dataframe
     filter(analysis_group == var) %>%
@@ -106,7 +106,7 @@ forestmeta_function <- function(casecontrol = TRUE, var, xlim = NULL, colgap.stu
               xlim = xlim,
               smlab = "",
               leftcols = c("study", "aclr_n", "timepoint_mean", "position"),
-              leftlabs = c("Study", "n\nACLR", "Mths post\nACLR", "Position"),
+              leftlabs = c("Study", "n\nACLR", "Months\npost ACLR", "Method"),
               rightcols = c("effect.ci"),
               rightlabs = c("RoM [95% CI]"),
               just.addcols = "left",

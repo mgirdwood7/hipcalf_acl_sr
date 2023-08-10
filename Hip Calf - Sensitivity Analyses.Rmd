@@ -57,7 +57,7 @@ tidymeta <- function(x){
 hip_within_loo <- hip_within_es %>%
   filter(is.na(exclude)) %>% # remove data to exclude from MA
   mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
-         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # 
+         timepoint_cat = factor(if_else(timepoint_mean >= 12, "More than 12 mths", "Less than 12 mths"))) %>% # 
   group_by(analysis_group) %>%
   mutate(k = length(study)) %>%
   nest(data = -c(analysis_group, k)) %>%# nest data, remove data that is consistent across subgroups
@@ -76,7 +76,7 @@ hip_within_loo <- hip_within_es %>%
 hip_casecontrol_loo <- hip_casecontrol_es %>%
   filter(is.na(exclude)) %>% # remove data to exclude from MA
   mutate(aclr_n = as.character(acl_n), # character for forest plot purposes
-         timepoint_cat = factor(if_else(timepoint_mean > 12, "More than 12 mths", "12 mths or less"))) %>% # 
+         timepoint_cat = factor(if_else(timepoint_mean >= 12, "More than 12 mths", "Less than 12 mths"))) %>% # 
   group_by(analysis_group) %>%
   mutate(k = length(study)) %>%
   nest(data = -c(analysis_group, k)) %>%# nest data, remove data that is consistent across subgroups
@@ -97,7 +97,7 @@ hip_casecontrol_loo <- hip_casecontrol_es %>%
 forest_loo <- function(casecontrol = TRUE, var, xlim = NULL, ...){
   dataset <- if(casecontrol == TRUE) hip_casecontrol_loo else hip_within_loo # choose which dataset
   
-  label <- if(casecontrol == TRUE) c("ACL group weaker", "Control group weaker") else  c("ACL side weaker", "Contra side weaker")
+  label <- if(casecontrol == TRUE) c("ACLR limb weaker", "Control limb weaker") else  c("ACLR limb weaker", "Contralateral limb weaker")
   
   data <- dataset %>% # pluck data from original dataframe
     filter(analysis_group == var) %>%
@@ -124,9 +124,7 @@ forest_loo <- function(casecontrol = TRUE, var, xlim = NULL, ...){
               xlab.pos = xlab,
               xlim = xlim,
               ...) 
-  
 }
-
 
 ```
 
